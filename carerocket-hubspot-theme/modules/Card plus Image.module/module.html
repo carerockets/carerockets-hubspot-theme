@@ -1,0 +1,29 @@
+<section {% if module.module_settings.module_name %}id="{{ module.module_settings.module_name }}"{% endif %}>
+  
+  <div class="container xl:px-24 mx-auto">
+    {% if module.title %}<h2>{{ module.title }}</h2>{% endif %}
+    {% if module.sub_title %}<p class="text-center mb-4 text-base md:text-xl">{{ module.sub_title }}</p>{% endif %}
+    <div class="grid lg:grid-cols-3 gap-4 lg:gap-6 container mx-auto">
+    {% for item in module.content %}
+    {% set href = item.card_link.url.href %}
+    {% if !item.card_link.url.href %}
+    {% set href = "javascript:;" %}
+    {% endif %}
+    <a {% if item.add_card_link %} href="{{ href }}" {% endif %} class="p-4 border justify-center max-w-sm lg:max-w-full mx-auto border-gray-lighter rounded-xl overflow-hidden block {% if item.card_link.url.href %} hover:cursor-pointer hover:border-primary {% endif %}"
+      {% if item.card_link.open_in_new_tab %}target="_blank"{% endif %}
+      {% if item.card_link.rel %}rel="{{ item.card_link.rel }}"{% endif %} >
+      {% if item.image.src %} 	
+      <div class="h-52">
+        <img class="max-w-full max-h-full h-auto mx-auto" src="{{ item.image.src }}" alt="{{ item.image.alt }}" {width="{{ item.image.width }}" height="{{ item.image.height }}">
+      </div>
+      {% endif %}
+
+      <div class="p-3 text-center text-black">
+        <h3 class="text-base md:text-2xl mb-2 md:mb-3">{{ item.title }}</h3>
+        <p class="text-sm md:text-base">{{ item.richtext }}</p>  
+      </div>
+    </a>
+    {% endfor %}
+    </div>
+  </div>
+</section>

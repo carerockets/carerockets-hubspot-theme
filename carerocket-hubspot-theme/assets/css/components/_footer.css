@@ -1,0 +1,10 @@
+.footer-menu .hs_cos_wrapper_type_simple_menu ul li:not(:last-child){
+  margin-bottom: 4px;
+}
+.footer-social-media-icon svg{
+  width: 20px;
+  height: 20px;
+}
+.richtext.copyright-text{
+  font-size: 9px;
+}

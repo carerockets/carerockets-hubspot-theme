@@ -1,0 +1,211 @@
+[ {
+  "id" : "8fae5145-98bc-d17c-c10c-2db2c39e9a16",
+  "name" : "contact_first_column",
+  "display_width" : null,
+  "label" : "Contact First Column",
+  "required" : false,
+  "locked" : true,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "4758a744-1dd9-9696-69f7-f067ef93a0d6",
+    "name" : "icon",
+    "display_width" : null,
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "ed926528-b345-d564-557b-f155427bf46e",
+    "name" : "richtext",
+    "display_width" : null,
+    "label" : "Rich text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "icon" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }
+}, {
+  "id" : "b70fddb1-de98-b916-8a98-22bd3d1135e5",
+  "name" : "footer_second_column",
+  "display_width" : null,
+  "label" : "Footer Second Column",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "6e0a495f-6c3f-0308-b984-baaf36891bf1",
+    "name" : "footer_menu",
+    "display_width" : null,
+    "label" : "Footer Menu",
+    "required" : false,
+    "locked" : false,
+    "type" : "simplemenu",
+    "default" : [ ]
+  }, {
+    "id" : "315b11bd-d944-3aa5-8d9e-2a8ec7ede74c",
+    "name" : "button",
+    "display_width" : null,
+    "label" : "Button",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "0b03860a-d3a7-8bef-b8f9-1135bd3e2d2d",
+      "name" : "button_label",
+      "display_width" : null,
+      "label" : "Button Label",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text"
+    }, {
+      "id" : "8f2fcd7a-1b4b-c540-5af5-b85aeac6f54f",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "footer_menu" : [ ],
+    "button" : {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  }
+}, {
+  "id" : "72530808-2d83-3f13-2905-c7d8a7a29147",
+  "name" : "social_media_links",
+  "display_width" : null,
+  "label" : "Social Media Links",
+  "required" : false,
+  "locked" : true,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "16075da3-fe6b-f4af-3746-3020ecef2aa3",
+    "name" : "icon",
+    "display_width" : null,
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-5.14.0",
+    "type" : "icon",
+    "default" : {
+      "name" : "Facebook Square",
+      "unicode" : "f082",
+      "type" : "REGULAR"
+    }
+  }, {
+    "id" : "3ab9e123-f9df-ece9-b8c7-f74d10a7d91b",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "icon" : {
+      "name" : "Facebook Square",
+      "unicode" : "f082",
+      "type" : "REGULAR"
+    },
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "bbd8db57-00d9-814e-667a-b34eeadd1f4b",
+  "name" : "copyright_text",
+  "display_width" : null,
+  "label" : "Copyright Text",
+  "required" : false,
+  "locked" : true,
+  "type" : "richtext"
+} ]

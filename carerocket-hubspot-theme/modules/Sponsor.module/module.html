@@ -1,0 +1,18 @@
+<section {% if module.module_settings.module_name %}id="{{ module.module_settings.module_name }}"{% endif %}>
+  
+  <div class="container xl:px-24 mx-auto">
+    {% if module.title %}<h2 class="text-center">{{ module.title }}</h2>{% endif %}
+    {% if module.sub_title %}<p class="text-center mb-4 text-base md:text-xl">{{ module.sub_title }}</p>{% endif %}
+    <div class="flex flex-wrap items-center justify-center max-w-screen-md w-full mx-auto">
+    {% for item in module.content %}
+     <div class="w-32 h-20 flex items-center m-2 rounded-xl transition delay-75">
+       {% if item.image.src %} 	
+        <img class="w-full h-auto" 
+             src="{{ item.image.src }}" alt="{{ item.image.alt }}" 
+             {width="{{ item.image.width }}" height="{{ item.image.height }}">
+        {% endif %}
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>

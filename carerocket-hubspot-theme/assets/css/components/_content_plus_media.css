@@ -1,0 +1,24 @@
+.shadow-image{
+  box-shadow: 0 0 80px rgb(0 0 0 / 10%);
+}
+.embeded-responsive{
+  position: relative;
+  overflow: hidden;
+}
+.embeded-responsive-16by9::before {
+    padding-top: 56.25%;
+}
+.embeded-responsive img{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  object-position:center;
+}
+
+.embeded-responsive video{
+  width: 100%;
+  height: 100%;
+}

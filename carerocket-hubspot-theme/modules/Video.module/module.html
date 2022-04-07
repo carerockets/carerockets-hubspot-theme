@@ -1,0 +1,23 @@
+<div>
+  <div class="max-w-screen-md px-4 mx-auto">
+    {% if module.content.title %}<h2 class="text-center">{{ module.content.title }}</h2>{% endif %}
+    {% if module.content.sub_title %}<p class="text-center mb-4 text-base md:text-xl">{{ module.content.sub_title }}</p>{% endif %}
+    {% if module.media.media_type == "image" %}
+    {% if module.media.image.src %}
+    <div class="border border-gray-lighter shadow-image rounded-2xl overflow-hidden">
+      <img class="max-w-full mx-auto h-auto" src="{{ module.media.image.src }}" alt="{{ module.media.image.alt }}" loading="lazy" width="{{ module.media.image.width }}" height="{{ module.media.image.height }}">
+    </div>
+    {% endif %}
+    {% elif module.media.media_type == "video" %}
+    <div class="embeded-responsive embeded-responsive-16by9 mt-6 lg:mt-12">
+      {% if module.media.video.video_source == "youtube" and module.media.video.youtube_id %}
+      <iframe src="https://www.youtube.com/embed/{{ module.media.video.youtube_id }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      {% elif module.media.video.video_source == "wistia" and module.media.video.wistia_id %}
+      <iframe src="//fast.wistia.net/embed/iframe/{{ module.media.video.wistia_id }}?videoFoam=true&playerColor=3d5060" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreenoallowfullscreen msallowfullscreen></iframe>
+      {% elif module.media.video.video_source == "hubspot" and module.media.video.video %}
+      <video src="{{ module.media.video.video }}" controls preload="none" poster="{{ module.media.video.video_poster.src }}"></video>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+</div>

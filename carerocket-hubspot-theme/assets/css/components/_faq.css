@@ -1,0 +1,20 @@
+.accordion-question-wrapper.is-active .accordion-question,
+.accordion-question-wrapper.is-active .accordion-question:hover{
+  cursor: pointer;
+  color: white;
+  background-color: #6EBAE7;
+}
+
+.accordion-question-wrapper.is-active .accordion-question svg,
+.accordion-question-wrapper.is-active .accordion-question:hover svg{
+  stroke: white;
+}
+
+.accordion-question-wrapper.is-active .accordion-question svg {
+  transform: rotatex(180deg);
+}
+
+.accordion-answer {
+  background-color: #F2F8FC;
+  margin-top: 8px;
+}

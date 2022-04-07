@@ -1,0 +1,90 @@
+[ {
+  "id" : "f55a8b88-af9c-098e-ec46-03b4afbefcdf",
+  "name" : "module_settings",
+  "display_width" : null,
+  "label" : "Module Settings",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "697d0cee-e3d0-1bac-a107-4b021db09d92",
+    "name" : "module_name",
+    "display_width" : null,
+    "label" : "Module Name",
+    "inline_help_text" : "Add module name to have the scroll to functionality. this module name will be used in <b>Module Name to Scroll</b> filed in button.<br/>only lowercase letters and underscore will be accepted as module name. example : <b>module_name</b>",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "^[a-z]+(?:_+[a-z]+)*$",
+    "validation_error_message" : "only lowercase letters and underscore will be accepted.",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+}, {
+  "id" : "4150a641-d5a0-ef2a-0abd-0115cb827223",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "ca2f4f04-a69c-a8d9-8875-6a1426bfc195",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }
+}, {
+  "id" : "d3f7b801-4e48-4465-364b-3921df4b8a4f",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "d3c80dd1-34b8-f65a-744b-71717ef87256",
+  "name" : "sub_title",
+  "display_width" : null,
+  "label" : "Sub Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+} ]

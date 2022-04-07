@@ -1,0 +1,61 @@
+<footer>
+  <div class="footer-container">
+    <div class="-mx-4 block sm:flex items-start justify-between">
+      <div class="px-4 space-y-2">
+        {% for item in module.contact_first_column %}
+        <div class="flex items-center space-x-3">
+          <span class="block">
+            {% if item.icon.src %}
+            <img class="w-7 h-7" src="{{ item.icon.src }}" alt="{{ item.icon.alt }}" {{ loadingAttr }} width="{{ item.icon.width }}" height="{{ item.icon.height }}">
+            {% endif %}
+          </span>
+          <div class="richtext">{{ item.richtext }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="px-4 mt-4 sm:mt-0">
+        <div class="footer-menu mb-2 text-left sm:text-right">
+          {% simple_menu menu_tree="{{ module.footer_second_column.footer_menu }}" %}
+          <div class="{% if module.footer_second_column.button.button_label %} mt-2 {% endif %}">
+            {% set href = module.footer_second_column.button.link.url.href %}
+            {% if !module.footer_second_column.button.link.url.href %}
+            {% set href = "javascript:;" %}
+            {% endif %}
+            <a href="{{ href }}" class="button-white-outline"
+               {% if module.footer_second_column.button.link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if module.footer_second_column.button.link.rel %}rel="{{ module.footer_second_column.button.link.rel }}"{% endif %}
+               >
+              {{ module.footer_second_column.button.button_label }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 sm:mt-2 flex items-center justify-start sm:justify-center space-x-3">
+      {% for item in module.social_media_links %}
+      {% set href = item.link.url.href %}
+      {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+      {% elif !item.link.url.href %}
+      {% set href = "javascript:;" %}
+      {% endif %}
+      <a href="{{ href }}" class="block footer-social-media-icon"
+         {% if item.link.open_in_new_tab and item.link.url.href %}target="_blank"{% endif %}
+         {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}
+         >
+        {% icon
+		name="{{ item.icon.name }}"
+		style="{{ item.icon.type }}"
+		unicode="{{ item.icon.unicode }}"
+		icon_set="{{ item.icon.icon_set }}"
+	%}
+      </a>
+      {% endfor %}
+    </div>
+    {% if module.copyright_text %}
+    <div class="text-left sm:text-center richtext copyright-text mt-3">
+      {{ module.copyright_text }}
+    </div>
+    {% endif %}
+  </div>
+</footer>
