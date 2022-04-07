@@ -1,0 +1,13 @@
+.accordion-question-wrapper{
+    &.is-active{
+      .accordion-question{
+        @apply cursor-default text-primary;
+        svg{
+          transform: rotatex(180deg);
+        }
+        &:hover{
+          @apply text-primary;
+        }
+      }
+    }
+  }

@@ -1,0 +1,60 @@
+<footer class="text-center">
+  <div>
+    {% if module.footer_logo.src %}
+    <div class="flex justify-center mb-6 md:mb-14">
+      <img class="h-6 md:h-12" alt="logo" src="{{ module.footer_logo.src }}" alt="{{ module.footer_logo.alt }}" loading="lazy" width="{{ module.footer_logo.width }}" height="{{ module.footer_logo.height }}">
+    </div>
+    {% endif %}
+    {% if module.contact_details %}
+    <div class="md:flex items-center justify-between -mx-4 mb-6 md:mb-14">
+      {% for item in module.contact_details %}
+      <div class="w-full md:w-1/3 p-4 text-center">
+        <div class="max-w-xs mx-auto">
+          <span class="flex justify-center block mb-6">
+            {% if item.icon.src %}
+            <img class="object-contain object-center w-9 h-9" src="{{ item.icon.src }}" alt="{{ item.icon.alt }}" loading="lazy" width="{{ item.icon.width }}" height="{{ item.icon.height }}">
+            {% endif %}
+          </span>
+          {% if item.richtext %}
+          <div class="richtext">
+            {{ item.richtext }}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="footer-menu">
+      {% menu id="{{ module.menu }}" , flyouts='false', max_levels='1' %}
+    </div>
+    {% if module.copyright %}
+    <span class="block text-base text-center text-primary mt-6 md:mt-14">
+      {{ module.copyright }}
+    </span>
+    {% endif %}
+
+    {% if module.add_social_media_buttons %}
+    <div class="flex items-center justify-center space-x-3 mt-6 md:mt-14">
+      {% for item in module.social_media_icon %}
+      {% set href = item.link.url.href %}
+      {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+      {% endif %}
+      {% if !item.link.url.href %}
+      {% set href = "javascript:;" %}
+      {% endif %}
+      <a href="{{ href }}" class="duration-300 transform hover:-translate-y-3"
+         {% if item.link.open_in_new_tab and item.link.url.href %}target="_blank"{% endif %}
+         {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}
+         >
+        {% if item.icon.src %}
+        <img class="w-8 h-8 object-cover object-center" src="{{ item.icon.src }}" alt="{{ item.icon.alt }}" loading="lazy" width="{{ item.icon.width }}" height="{{ item.icon.height }}">
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</footer>

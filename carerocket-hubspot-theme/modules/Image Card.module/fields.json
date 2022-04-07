@@ -1,0 +1,153 @@
+[ {
+  "id" : "f55a8b88-af9c-098e-ec46-03b4afbefcdf",
+  "name" : "module_settings",
+  "display_width" : null,
+  "label" : "Module Settings",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "6c8faa67-0477-49cc-7556-267278b7fad2",
+    "name" : "module_name",
+    "display_width" : null,
+    "label" : "Module Name",
+    "inline_help_text" : "Add module name to have the scroll to functionality. this module name will be used in <b>Module Name to Scroll</b> filed in button.<br/>only lowercase letters and underscore will be accepted as module name. example : <b>module_name</b>",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "^[a-z]+(?:_+[a-z]+)*$",
+    "validation_error_message" : "only lowercase letters and underscore will be accepted.",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+}, {
+  "id" : "03a161a6-030f-16e3-d0ae-870fd4b58a70",
+  "name" : "section_header",
+  "display_width" : null,
+  "label" : "Section Header",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "1c9fe31f-738b-c4a1-16da-a337b30ed1b8",
+    "name" : "sup_title",
+    "display_width" : null,
+    "label" : "Sup Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "3d6df4ea-34ba-66d5-29c4-dda52cff2b8a",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "inline_help_text" : "&lt;h2&gt;",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "4488fb7b-eccd-b349-2927-c090d0dd38ca",
+    "name" : "richtext",
+    "display_width" : null,
+    "label" : "Richtext",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+}, {
+  "id" : "17cb048d-75f2-03f4-68b8-c25134dc1473",
+  "name" : "image_cards",
+  "display_width" : null,
+  "label" : "Image Cards",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "15b8071e-109a-d7f0-acbc-5051ee39e44c",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "9f73f1ca-8fe9-fa70-20df-681d90aaf815",
+    "name" : "caption_text",
+    "display_width" : null,
+    "label" : "Caption Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "4e950e25-a6b2-d478-65fa-08dd232df4ec",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }
+}, {
+  "id" : "ce0604f5-efae-60a4-15cb-5102cadd7fba",
+  "name" : "section_footer",
+  "display_width" : null,
+  "label" : "Section Footer",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "8aecadad-cb87-fc52-a0db-0a576624686d",
+    "name" : "richtext",
+    "display_width" : null,
+    "label" : "Rich text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+} ]
