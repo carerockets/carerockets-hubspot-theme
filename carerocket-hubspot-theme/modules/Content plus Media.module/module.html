@@ -3,10 +3,12 @@
     <div class="lg:w-1/2 px-4 mb-6 lg:mb-0 {% if module.media.place_media_on_right %} order-last {% endif %}">
       {% if module.media.media_type == "image" %}
       {% if module.media.image.src %}
-      <img class="w-full h-auto" src="{{ module.media.image.src }}" alt="{{ module.media.image.alt }}" loading="lazy" width="{{ module.media.image.width }}" height="{{ module.media.image.height }}">
+      <div class="">
+        <img class="overflow-hidden border border-gray-lighter shadow-image rounded-2xl max-w-full mx-auto h-auto" src="{{ module.media.image.src }}" alt="{{ module.media.image.alt }}" loading="lazy" width="{{ module.media.image.width }}" height="{{ module.media.image.height }}">
+      </div>
       {% endif %}
       {% elif module.media.media_type == "video" %}
-      <div class="aspect-w-16 aspect-h-9">
+      <div class="embeded-responsive embeded-responsive-16by9">
         {% if module.media.video.video_source == "youtube" and module.media.video.youtube_id %}
         <iframe src="https://www.youtube.com/embed/{{ module.media.video.youtube_id }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         {% elif module.media.video.video_source == "wistia" and module.media.video.wistia_id %}
@@ -16,8 +18,13 @@
         {% endif %}
       </div>
       {% endif %}
+      {% if module.media.richtext %}
+      <div class="p-6 text-center">
+        {{ module.media.richtext }}
+      </div>
+      {% endif %}
     </div>
-    <div class="lg:w-1/2 px-4 {% if module.media.place_media_on_right %} lg:pr-24 {% else %} lg:pl-24 {% endif %}">
+    <div class="lg:w-1/2 px-4 {% if module.content.make_content_center_align %} text-center {% endif %} {% if module.media.place_media_on_right %} lg:pr-24 {% else %} lg:pl-24 {% endif %}">
       {% if module.content.sup_title %}<b class="block mb-2">{{ module.content.sup_title }}</b>{% endif %} 
       {% if module.content.title %}<h2>{{ module.content.title }}</h2>{% endif %}
       {% if module.content.richtext %}
@@ -64,17 +71,21 @@
           {{ item.button_label }}
         </a>
 
-        {% elif item.button_type == "hubspot_chat" %}
+        {% elif item.button_type == "modal" %}
 
-        <a href="javascript:window.HubSpotConversations.widget.open();" 
-           class="flex md:inline-flex m-1 {{ button_class }}">
-          {{ item.button_label }}
-        </a>
+            <a href="javascript:;" class="flex md:inline-flex m-1 {{ button_class }}" data-toggle="modal" data-target="freemium-signup-modal">
+              {{ item.button_label }}
+            </a>
+        
+          {% elif item.button_type == "cta" %}
+
+            {% cta guid="{{ item.cta }}" %}
 
         {% endif %}
         {% endfor %}
       </div>
       {% endif %}
+      {% if module.content.button_caption_text %} <span class="my-3 text-xs text-black">{{ module.content.button_caption_text }}</span> {% endif %}
     </div>
   </div>
 </div>

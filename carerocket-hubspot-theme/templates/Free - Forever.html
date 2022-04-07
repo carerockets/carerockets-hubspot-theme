@@ -1,0 +1,621 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home - Free Forever - Test
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+{# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+
+{% dnd_area "dnd_area"
+  label="Main section",
+  class="body-container body-container--home"
+%}
+
+{% dnd_section
+  background_linear_gradient={
+    "colors" : [ "rgba(255, 255, 255, 1)", "rgba(117, 181, 218, 1)" ],
+    "direction" : "to bottom right"
+  },
+  padding={
+    "default" : {
+      "top" : "150px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/Carerocket-hubspot-theme/modules/Hero Header",
+        offset=0,
+        width=12,
+        content={
+          "add_button" : true,
+          "button" : [ {
+            "button_label" : "Jetzt kostenlos anmelden",
+            "button_style" : "button-secondary",
+            "button_type" : "modal",
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "https://www.google.com",
+                "type" : "EXTERNAL"
+              }
+            },
+            "module_name" : "scroll_link"
+          } ],
+          "button_caption_text" : "Keine Zahlungsdaten erforderlich",
+          "modal" : {
+            "form" : {
+              "form_id" : "5a88f9e1-f3f4-47b5-a70a-a4530940ba04",
+              "form_type" : "HUBSPOT",
+              "message" : "Thanks for submitting the form.",
+              "response_type" : "inline"
+            },
+            "modal_title" : "Create a free forever account"
+          },
+          "richtext" : "<p><span>Recruiting und Employer Branding für ambulante Pflegedienste und Altenpflegeeinrichtungen. Free Forever ist und bleibt kostenlos.</span></p>",
+          "title" : "Pflegekräfte erreichen und einstellen mit Care Rockets Free Forever"
+        },
+        media={
+          "media_type" : "video",
+          "place_media_on_right" : true,
+          "video" : {
+            "video" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/dummy-video.mp4",
+            "video_poster" : {
+              "alt" : "video-poster-1",
+              "height" : 1080,
+              "loading" : "lazy",
+              "max_height" : 1080,
+              "max_width" : 1920,
+              "size_type" : "auto",
+              "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/video-poster-1.webp",
+              "width" : 1920
+            },
+            "video_source" : "hubspot"
+          }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/Carerocket-hubspot-theme/modules/Content plus Media",
+        offset=0,
+        width=12,
+        content={
+          "richtext" : "<p style='font-size: 18px;'>Machen Sie Pflegekräfte in Ihrer Region mit Stellenanzeigen auf Ihr Unternehmen aufmerksam.</p>",
+          "title" : "Unlimitiert kostenlose Stellenanzeigen schalten"
+        },
+        media={
+          "image" : {
+            "alt" : "benefit-job-offer",
+            "height" : 1080,
+            "max_height" : 1080,
+            "max_width" : 1775,
+            "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/benefit-job-offer.png",
+            "width" : 1775
+          },
+          "media_type" : "image",
+          "place_media_on_right" : true
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{% dnd_section
+  background_color="rgba(242, 248, 252, 1)",
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/Carerocket-hubspot-theme/modules/Content plus Media",
+        offset=0,
+        width=12,
+        content={
+          "richtext" : "<p style='font-size: 18px;'>Care Rockets dreht das Prinzip der Stellenbörsen um. Hier bewerben sich Arbeitgeber bei Pflegekräften.</p>",
+          "title" : "Direkt bei Pflegekräften bewerben"
+        },
+        media={
+          "image" : {
+            "alt" : "benefit-application",
+            "height" : 1080,
+            "max_height" : 1080,
+            "max_width" : 1920,
+            "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/benefit-application.png",
+            "width" : 1920
+          },
+          "media_type" : "image",
+          "place_media_on_right" : false
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/Carerocket-hubspot-theme/modules/Content plus Media",
+        offset=0,
+        width=12,
+        content={
+          "richtext" : "<p style='font-size: 18px;'>Stellen Sie Ihre Vorteile dar und lassen Sie Ihre Mitarbeiter für Sie sprechen.</p>",
+          "title" : "Zeigen, dass Sie ein guter Arbeitgeber sind"
+        },
+        media={
+          "image" : {
+            "alt" : "benefit-ratings",
+            "height" : 1080,
+            "max_height" : 1080,
+            "max_width" : 1920,
+            "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/benefit-ratings.png",
+            "width" : 1920
+          },
+          "media_type" : "image",
+          "place_media_on_right" : true
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{% dnd_section
+  background_color="rgba(242, 248, 252, 1)",
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/Carerocket-hubspot-theme/modules/Content plus Media",
+        offset=0,
+        width=12,
+        content={
+          "richtext" : "<p style='font-size: 18px;'>Filtern Sie nach Ihren Wunsch-Profilen und kontaktieren Sie Pflegekräfte so direkt wie sonst nirgends.</p>",
+          "title" : "Active Sourcing, pflege-spezifisch und kostenlos"
+        },
+        media={
+          "image" : {
+            "alt" : "benefit-sourcing",
+            "height" : 1080,
+            "max_height" : 1080,
+            "max_width" : 1920,
+            "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/benefit-sourcing.png",
+            "width" : 1920
+          },
+          "media_type" : "image",
+          "place_media_on_right" : false
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "50px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/Carerocket-hubspot-theme/modules/Centered Richtext",
+        offset=0,
+        width=12,
+        content={
+          "richtext" : "<h4 style='font-size: 18px;'>Examinierte Pflegefachkräfte finden mit dem kostenlosen Care Rockets Unternehmensprofil</h4>",
+          "sup_title" : "",
+          "title" : "Pflegepersonal gesucht?"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "0px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/Carerocket-hubspot-theme/modules/Card plus Image",
+        offset=0,
+        width=12,
+        content=[ {
+          "card_link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "image" : {
+            "alt" : "cr-team-1",
+            "height" : 2301,
+            "loading" : "lazy",
+            "max_height" : 2301,
+            "max_width" : 2733,
+            "size_type" : "auto",
+            "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/cr-team-1.jpeg",
+            "width" : 2733
+          },
+          "richtext" : "<div>\n<div>\n<p>Für und mit Pflegekräfte arbeiten wir an dem Ziel die Arbeitsbedingungen in der Pflege zu verbessern. Arbeitgeber auf unserer Plattform verfolgen den wertschätzenden Ansatz sich bei Pflegekräften zu bewerben und von ihnen zu lernen.</p>\n</div>\n</div>",
+          "title" : "Gemeinsame Mission"
+        }, {
+          "card_link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "image" : {
+            "alt" : "benefit-relevante",
+            "height" : 1342,
+            "max_height" : 1342,
+            "max_width" : 1406,
+            "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/benefit-relevante.png",
+            "width" : 1406
+          },
+          "richtext" : "<div>\n<div>\n<p>Das Interesse der Pflegekräfte auf Care Rockets teil sich auf diese Arbeitsbereiche auf: Altenpflege: 66 %, ambulante Pflege: 45 %, Krankenhaus Peripherie: 44 %, Psychiatrische Pflege: 25 %, Tagespflege: 17 %, und mehr.</p>\n</div>\n</div>",
+          "title" : "Relevante Zielgruppe"
+        }, {
+          "card_link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "image" : {
+            "alt" : "beratung-support",
+            "height" : 270,
+            "max_height" : 270,
+            "max_width" : 480,
+            "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/beratung-support.png",
+            "width" : 480
+          },
+          "richtext" : "<div>\n<div>\n<div>\n<div>\n<div>\n<div>\n<p>Wir helfen Ihnen dabei, Ihr Unternehmen durch die Brille einer Pflegekraft zu betrachten. Gemeinsam erarbeiten wir Ihre individuelle Strategie, mit der Sie sich von Ihren Marktbegleitern abheben.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>",
+          "title" : "Beratung & Support"
+        } ],
+        module_settings={
+          "module_name" : "scroll_link"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{% dnd_section
+  background_color="rgba(242, 248, 252, 1)"
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/Carerocket-hubspot-theme/modules/Sponsor",
+        offset=0,
+        width=12,
+        content=[ {
+          "image" : {
+            "alt" : "Kenbi-2",
+            "height" : 120,
+            "loading" : "lazy",
+            "max_height" : 120,
+            "max_width" : 259,
+            "size_type" : "auto",
+            "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/Kenbi-2.png",
+            "width" : 259
+          }
+        }, {
+          "image" : {
+            "alt" : "EVK Herne-1",
+            "height" : 120,
+            "loading" : "lazy",
+            "max_height" : 120,
+            "max_width" : 259,
+            "size_type" : "auto",
+            "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/EVK%20Herne-1.png",
+            "width" : 259
+          }
+        }, {
+          "image" : {
+            "alt" : "buurtzorg-1",
+            "height" : 120,
+            "loading" : "lazy",
+            "max_height" : 120,
+            "max_width" : 259,
+            "size_type" : "auto",
+            "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/buurtzorg-1.png",
+            "width" : 259
+          }
+        }, {
+          "image" : {
+            "alt" : "Pneumocore Intensivpflege-1",
+            "height" : 120,
+            "loading" : "lazy",
+            "max_height" : 120,
+            "max_width" : 259,
+            "size_type" : "auto",
+            "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/Pneumocore%20Intensivpflege-1.png",
+            "width" : 259
+          }
+        }, {
+          "image" : {
+            "alt" : "talea-logo-1",
+            "height" : 120,
+            "loading" : "lazy",
+            "max_height" : 120,
+            "max_width" : 259,
+            "size_type" : "auto",
+            "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/talea-logo-1.png",
+            "width" : 259
+          }
+        }, {
+          "image" : {
+            "alt" : "Theodor Fliedner Stiftung-1",
+            "height" : 120,
+            "loading" : "lazy",
+            "max_height" : 120,
+            "max_width" : 259,
+            "size_type" : "auto",
+            "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/Theodor%20Fliedner%20Stiftung-1.png",
+            "width" : 259
+          }
+        }, {
+          "image" : {
+            "alt" : "UKD Universitätsklinikum Düsseldorf-1",
+            "height" : 120,
+            "loading" : "lazy",
+            "max_height" : 120,
+            "max_width" : 259,
+            "size_type" : "auto",
+            "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/UKD%20Universita%CC%88tsklinikum%20Du%CC%88sseldorf-1.png",
+            "width" : 259
+          }
+        } ],
+        module_settings={
+          "spacing" : {
+            "custom_bottom_spacing" : 100,
+            "custom_top_spacing" : 100,
+            "remove_bottom_space" : true,
+            "remove_top_space" : true
+          },
+          "sponsor_background_color" : {
+            "color" : "#FFFFFF",
+            "opacity" : 100
+          }
+        },
+        sub_title="Arbeitgeber in ganz Deutschland, die bei uns Pflegefachkräfte finden",
+        title="Unternehmen auf Care Rockets"
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "0px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/Carerocket-hubspot-theme/modules/Centered Richtext",
+        offset=0,
+        width=12,
+        content={
+          "title" : "Fragen und Antworten"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{% dnd_section
+  padding={
+    "default" : {
+      "top" : "40px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/Carerocket-hubspot-theme/modules/Faq",
+        offset=0,
+        width=12,
+        questions=[ {
+          "answer" : "<p>Care Rockets ist eine digitale Job- und Recruiting-Plattform für Pflegekräfte und Arbeitgeber in der Pflege. Arbeitgebern helfen wir dabei passende Pflegefachkräfte zu finden und einzustellen.</p>",
+          "question" : "Was ist Care Rockets?"
+        }, {
+          "answer" : "<p>Care Rockets ist unser für immer kostenloses Basispaket für Arbeitgeber in der Pflege, die Pflegepersonal suchen. Es beinhaltet unlimitierte Stellenanzeigen, ein Unternehmensprofil, ein Kandidaten-Management-System sowie monatlich 5 Direkt-Nachrichten (SMS) an die Pflegekräfte auf unserer Plattform.</p>",
+          "question" : "Was ist Care Rockets Free Forever?                                        "
+        }, {
+          "answer" : "<p>Mit Care Rockets Free Forever erhalten Sie Reichweite und Zugang zu den Pflegekräften auf unserer Plattform. Sie können direkt auf die Pflegefachkräfte zugehen und das passende Pflegepersonal für Ihren Bedarf finden und einstellen.</p>",
+          "question" : "Was bringt mir Care Rockets Free Forever?                                        "
+        }, {
+          "answer" : "<p>Auf Care Rockets erreichen Sie Kandidaten aller Berufsgruppen rund um den Bereich Pflege, z.B.:</p>\n<ul>\n<li>Gesundheits- und Krankenpfleger*innen</li>\n<li>Gesundheits- und Kinderkrankenpfleger*innen</li>\n<li>Altenpfleger*innen</li>\n<li>Pflegeassistent*innen (Krankenpflege/Altenpflege)</li>\n</ul>\n<p>Genauso erhalten Sie über Care Rockets Reichweite zu pflegenahen bzw. verwandten Berufsgruppen, wie z.B.:</p>\n<ul>\n<li>Heilerziehungspflegehelfer*innen</li>\n<li>Operationstechnische Assistent*innen (OTA)</li>\n<li>Anästhesietechnische Assistent*innen (ATA)</li>\n<li>Hebammen</li>\n</ul>\n<p>Auch Leitungspersonal und akademisierte Pflegepersonen freuen sich auf Ihre Ansprache, z.B.:</p>\n<ul>\n<li>Pflegedienstleitungen/Stationsleitungen</li>\n<li>Pflegemanagement (Bachelor/Master)</li>\n<li>Pflegewissenschaften (Bachelor/Master)</li>\n<li>Pflegepädagogik (Bachelor/Master)</li>\n</ul>",
+          "question" : "Welche Pflegekräfte kann ich mit Care Rockets Free Forever finden?                                        "
+        }, {
+          "answer" : "<p>Ja. Care Rockets Free Forever ist und bleibt kostenlos. Für immer. Für die Anmeldung und die Nutzung eines Free Forever Accounts sind keine Zahlungsdaten notwendig. Neben Free Forever gibt es umfangreichere kostenpflichtige Pakete für Arbeitgeber. Ein Upgrade von Free Forever in ein kostenpflichtiges Paket ist zu 100 % optional und liegt alleine in Ihrer Entscheidung. Mehr über die kostenpflichtigen Pakete erfahren Sie <a>hier.</a></p>",
+          "question" : "Ist Care Rockets Free Forever wirklich kostenlos?                                        "
+        }, {
+          "answer" : "<p>Für unserer Plattform ist das Bereitstellen eines umfangreichen Angebots für Pflegekräfte das höchste Gut. Deshalb ist es uns wichtig viele verschiedene Arbeitgeber mit Angeboten auf der Plattform zu haben. Dafür bieten wir jedem Arbeitgeber in der Pflege die Möglichkeit für einen einfachen und kostenfreien Zugang zu Pflegekräften.</p>",
+          "question" : "Warum bieten wir ein kostenloses Paket an?                                        "
+        } ]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+{% dnd_section %}
+  {% dnd_module
+    path="/Carerocket-hubspot-theme/modules/Video",
+    offset=0,
+    width=12,
+    content={
+      "sup_title" : "",
+      "title" : "Wie Care Rockets Free Forever funktioniert"
+    },
+    media={
+      "media_type" : "video",
+      "video" : {
+        "video" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/dummy-video.mp4",
+        "video_poster" : {
+          "alt" : "video-poster-1",
+          "height" : 1080,
+          "loading" : "lazy",
+          "max_height" : 1080,
+          "max_width" : 1920,
+          "size_type" : "auto",
+          "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/video-poster-1.webp",
+          "width" : 1920
+        },
+        "video_source" : "hubspot"
+      }
+    }
+  %}
+  {% end_dnd_module %}
+{% end_dnd_section %}
+
+{% dnd_section
+  background_color="rgba(242, 248, 252, 1)"
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/Carerocket-hubspot-theme/modules/Content plus Media",
+        offset=0,
+        width=12,
+        content={
+          "add_button" : true,
+          "button" : [ {
+            "button_caption_text" : "Keine Zahlungsdaten erforderlich",
+            "button_label" : "Jetzt kostenlos anmelden",
+            "button_style" : "button-secondary",
+            "button_type" : "modal",
+            "link" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          } ],
+          "button_caption_text" : "Keine Zahlungsdaten erforderlich",
+          "make_content_center_align" : true,
+          "richtext" : "<p>Recruiting und Employer Branding für ambulante Pflegedienste und Altenpflegeeinrichtungen. Free Forever ist und bleibt kostenlos.</p>",
+          "title" : "Pflegekräfte erreichen und einstellen mit Care Rockets Free Forever"
+        },
+        media={
+          "image" : {
+            "alt" : "audience-tool (1)",
+            "height" : 410,
+            "max_height" : 410,
+            "max_width" : 341,
+            "src" : "https://4106085.fs1.hubspotusercontent-na1.net/hubfs/4106085/audience-tool%20(1).png",
+            "width" : 341
+          },
+          "media_type" : "image",
+          "place_media_on_right" : false,
+          "richtext" : "<div style='font-weight: 500; text-align: center;'><span style='color: #6ebae7;'><strong>13.352</strong></span><span>&nbsp;</span>Pflegekräfte auf Care Rockets</div>\n<div style='font-weight: 500; text-align: center;'>&nbsp;</div>\n<div style='text-align: center; font-size: 13px;\'><span>Filterbar nach Beruf, Erfahrung, Weiterbildung und mehr</span></div>"
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}
+
+
+{% end_dnd_area %}
+{% endblock body %}

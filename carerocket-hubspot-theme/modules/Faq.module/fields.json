@@ -101,6 +101,17 @@
       "remove_top_space" : false,
       "remove_bottom_space" : false
     }
+  }, {
+    "id" : "981d896e-9c7d-28ca-27ea-591f7519eaa3",
+    "name" : "container_layout",
+    "display_width" : null,
+    "label" : "Container Layout",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "container", "Full Width" ], [ "max-w-screen-md", "Medium Width" ] ],
+    "type" : "choice",
+    "default" : "max-w-screen-md"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -113,7 +124,8 @@
     "spacing" : {
       "remove_top_space" : false,
       "remove_bottom_space" : false
-    }
+    },
+    "container_layout" : "max-w-screen-md"
   }
 }, {
   "id" : "3c197d6b-5a3a-1d36-4f1f-0aa30910dac0",

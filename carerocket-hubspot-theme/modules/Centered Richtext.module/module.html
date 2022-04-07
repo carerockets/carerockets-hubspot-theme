@@ -46,12 +46,15 @@
         {{ item.button_label }}
       </a>
       
-      {% elif item.button_type == "hubspot_chat" %}
-      
-      <a href="javascript:window.HubSpotConversations.widget.open();" 
-         class="flex md:inline-flex m-1 {{ button_class }}">
-        {{ item.button_label }}
-      </a>
+      {% elif item.button_type == "modal" %}
+
+            <a href="javascript:;" class="flex md:inline-flex m-1 {{ button_class }}" data-toggle="modal" data-target="freemium-signup-modal">
+              {{ item.button_label }}
+            </a>
+        
+          {% elif item.button_type == "cta" %}
+
+            {% cta guid="{{ item.cta }}" %}
 
       {% endif %}
       {% endfor %}
